@@ -23,6 +23,35 @@
 //   Equivalencia (variante)         Lo mismo declarando además rutas, aceleración, pausas y
 //                                   regla «combinar» (la VARIANTE=1 de equivalenciaGWC.js).
 //
+// FUNCIONES
+//   _$                         Un elemento del DOM por id.
+//   _linea                     Una línea (clase + texto) en la salida de la pestaña; las
+//                              clases la pintan verde, roja o de aviso (estilos.css).
+//   _ok / _mal                 Las líneas OK y FALLO del resultado.
+//   _igual / _nz / _nn         Comparación JSON y normalización de lo indefinido a null.
+//   cartuchoLaboratorio        Monta un cartucho mínimo propio (2 sprites, 3 segmentos,
+//                              pantalla 100×80 sin escalar), independiente de lo cargado.
+//   crc16                      CRC-16/CCITT-FALSE calculado de forma independiente.
+//   codigoCRC                  El Código GWC «#HHHH#» que corresponde a un fichero.
+//   _pruebaCrcYLector          PRUEBA 1 «CRC y lector del GWC»: se genera y se lee, el
+//                              CRC frente al cálculo independiente (vector y módulo),
+//                              detección de intercambios y errores claros del lector
+//                              ante datos fuera de rango (F5-I14).
+//   _pruebaColorFondo          PRUEBA 2 «ColorFondo en el GWC»: fondo por defecto,
+//                              viaje del ColorFondo y huella en el Código (F5-I14).
+//   _prepararEquivalencia      El GWI en memoria + el GWC que sale de él, releído;
+//                              null si no hay GWI cargado (lo avisa el lanzador).
+//   _diferenciasEquivalencia   Configuración y campo a campo de cada segmento: GWI ↔ GWC
+//                              (solo los que viajan: sin tipo 99 ni fusionados).
+//   _pruebaEquivalencia        PRUEBAS 3 y 4 «Equivalencia (datos)» y «(variante
+//                              declarada)»: sin diferencias = IGUALES (F5-I13).
+//   PRUEBAS                    El catálogo: id, nombre y ejecutor de cada prueba.
+//   _lanzar                    Lanza una prueba, pinta línea a línea y cierra con el
+//                              resumen (N OK, M fallo(s) y tiempo).
+//   inicializar                Con GW_DEBUG activo: descubre la pestaña y crea un botón
+//                              por prueba. Público: único punto de arranque del módulo, lo
+//                              llama el propio script al cargar.
+//
 // USO
 //   Abrir index.html con GW_DEBUG = true y entrar en la pestaña Pruebas.
 // ================================================================================================
